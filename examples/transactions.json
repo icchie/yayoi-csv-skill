@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2024/06/15",
+    "income": 0,
+    "outcome": 3280,
+    "description": "さくら電器 ワイヤレスマウス",
+    "reduced_tax": false
+  },
+  {
+    "date": "2024/08/22",
+    "income": 0,
+    "outcome": 1500,
+    "description": "丸山書店 プログラミング入門書",
+    "reduced_tax": false
+  },
+  {
+    "date": "2024/10/05",
+    "income": 0,
+    "outcome": 980,
+    "description": "コンビニ ミネラルウォーター 6本",
+    "reduced_tax": true
+  },
+  {
+    "date": "2024/11/03",
+    "income": 12000,
+    "outcome": 0,
+    "description": "原稿料 受領"
+  }
+]
