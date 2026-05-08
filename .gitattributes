@@ -1,0 +1,11 @@
+# 弥生は Shift-JIS / CR+LF を要求するため、Git の改行・テキスト変換を抑止する
+examples/*.csv binary
+
+# Python スクリプトは LF で固定
+*.py text eol=lf
+
+# Markdown / JSON は LF で固定 (CRLF に勝手に変換されないように)
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
