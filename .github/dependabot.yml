@@ -10,3 +10,10 @@ updates:
       - "github-actions"
     commit-message:
       prefix: "ci"
+    # 攻撃されたバージョンが流れてきても自動 PR が立たないようリリース後の待機期間を設ける
+    # 注意: cooldown は version updates のみに効く。CVE 由来の security updates には適用されない（即パッチが入る）
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+      semver-minor-days: 7
+      semver-patch-days: 3
