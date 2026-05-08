@@ -34,3 +34,15 @@ GitHub の **Security Advisories** から非公開で報告してください:
 ## サポート対象
 
 最新の `main` ブランチおよび最新リリースのみがセキュリティパッチの対象です。
+
+## 依存関係更新の運用ルール
+
+供給元（GitHub Actions のリリース等）が侵害されたバージョンを掴まないよう、Dependabot が起票する PR は以下のルールでマージします。
+
+- **リリース公開から 14 日以上経過していること**を確認してからマージする
+  - PR 内のリリース日時、または該当リポジトリの Releases ページで確認
+  - 14 日経っていなければ PR を保留しておく（自動マージはしない）
+- メジャーバージョンアップは特に変更点 / changelog を読み、CI が通っていることを確認する
+- CVE 由来の **security update** はこのルールの対象外で、確認のうえ速やかにマージする
+
+NOTE: Dependabot の `cooldown` 機能は本リポジトリで唯一使う `github-actions` ecosystem では未対応 ([dependabot/dependabot-core#14628](https://github.com/dependabot/dependabot-core/issues/14628)) のため、この運用ルールで代替している。
